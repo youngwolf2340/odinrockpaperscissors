@@ -11,17 +11,55 @@
         function compChoice() {
             let num1 = Math.random();
             if (num1 <= 0.333) {
-                return "Rock";
+                return "ROCK";
             }
             else if (num1 > 0.333 && num1 <= 0.666) {
-                return "Paper";
+                return "PAPER";
             }
             else if (num1 > 0.666) {
-                return "Scissors";
+                return "SCISSORS";
             }
     
         }
-        console.log(compChoice())
+        function playerPlay() {
+            const ask = prompt("Rock, Paper, or Scissors?").toUpperCase();
+            return ask;
+        }
+        function play(compSelect, playerSelect) {
+            
+            if (playerSelect === compSelect) {
+                return "TIE";
+            }
+            else if (playerSelect === "ROCK" && compSelect === "PAPER") {
+                return "COMPUTER WINS";
+            }
+            else if (playerSelect === "ROCK" && compSelect === "SCISSORS") {
+                return "YOU WIN";
+            }
+            else if (playerSelect === "PAPER" && compSelect === "SCISSORS") {
+                return "COMPUTER WINS";
+            }
+            else if (playerSelect === "PAPER" && compSelect === "ROCK") {
+                return "YOU WIN";
+            }
+            else if (playerSelect === "SCISSORS" && compSelect === "ROCK") {
+                return "COMPUTER WINS";
+            }
+            else if (playerSelect === "SCISSORS" && compSelect === "PAPER") {
+                return "YOU WIN";
+            }
+            }
+            const playerSelect = playerPlay();
+            const compSelect = compChoice();
+            function rounds() {
+                
+            }
+                
+                
+            
+            console.log(rounds())
+            
+        
     </script>
 </body>
 </html>
